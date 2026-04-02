@@ -1,0 +1,536 @@
+/* ═══════════════════════════════════════════
+   KNOBS AND LEVERS — style.css
+   Sweet Summer Melon palette
+   ═══════════════════════════════════════════ */
+
+/* ── COLOR VARIABLES ──
+   Change these to repaint the whole site at once */
+:root {
+  --red:        #e07870;
+  --red-dark:   #c86060;
+  --red-text:   #f8f0e8;
+  --yellow:     #f2c96e;
+  --yellow-dark:#e0b055;
+  --yellow-text:#5a3a1a;
+  --teal:       #5f9e90;
+  --teal-dark:  #4a8880;
+  --teal-text:  #f8f0e8;
+  --cream:      #f8f0e8;
+  --cream-dark: #e8d8c8;
+  --pink:       #e8c4b8;
+  --pink-text:  #7a3a2a;
+  --bg:         #fdf8f4;
+  --text:       #5a3a1a;
+  --text-mid:   #7a5a3a;
+  --text-muted: #a08060;
+}
+
+/* ── RESET & BASE ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  /* FONT SLOT: swap Georgia for a Google Font by adding a <link> in index.html
+     e.g. font-family: 'Lora', serif; or 'Nunito', sans-serif; */
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { color: var(--red); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+/* ── TOPBAR ── */
+.topbar {
+  background-color: var(--red);
+  border-bottom: 2px solid var(--red-dark);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--red-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
+}
+
+/* ICON SLOT: style your logo icon here */
+.logo-icon {
+  font-size: 1.3rem;
+  /* if using an img: width: 28px; height: 28px; object-fit: contain; */
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-family: inherit;
+  color: var(--red-text);
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.35);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+  cursor: pointer;
+}
+.nav-btn:hover { background: rgba(255,255,255,0.35); text-decoration: none; transform: translateY(-1px); }
+.nav-btn.active { background: rgba(255,255,255,0.3); }
+.nav-btn.teal { background: var(--teal); border-color: var(--teal-dark); }
+.nav-btn.yellow { background: var(--yellow); color: var(--yellow-text); border-color: var(--yellow-dark); }
+
+/* ── LAYOUT ── */
+.layout {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-card {
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sidebar-card-header {
+  background: var(--yellow);
+  border-bottom: 1px solid var(--yellow-dark);
+  color: var(--yellow-text);
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 7px 14px;
+}
+
+.sidebar-card-body {
+  padding: 12px 14px;
+}
+
+/* nav list */
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nav-list a {
+  display: block;
+  padding: 5px 8px;
+  border-radius: 7px;
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s, padding-left 0.12s;
+}
+.nav-list a:hover { background: rgba(242,201,110,0.2); color: var(--text); padding-left: 12px; }
+.nav-list a.active { background: rgba(242,201,110,0.25); color: var(--text); font-weight: bold; }
+
+/* status list */
+.status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.status-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--text-muted);
+}
+.status-value {
+  font-size: 0.78rem;
+  color: var(--text);
+  font-weight: bold;
+}
+/* LED indicator */
+.status-value.led {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--teal);
+}
+.led-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  /* ANIMATION SLOT: uncomment to make it pulse */
+  /* animation: ledpulse 1.8s ease-in-out infinite; */
+}
+@keyframes ledpulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(95,158,144,0.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(95,158,144,0); }
+}
+
+/* now playing */
+.now-playing {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--cream-dark);
+}
+.now-playing-header {
+  background: var(--yellow);
+  border-bottom: 1px solid var(--yellow-dark);
+  color: var(--yellow-text);
+  font-size: 0.68rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+}
+.now-playing-body {
+  padding: 8px 10px;
+  background: var(--cream);
+}
+.np-artist {
+  font-size: 0.82rem;
+  font-weight: bold;
+  color: var(--text);
+}
+.np-track {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.np-bar {
+  margin-top: 8px;
+  height: 4px;
+  background: var(--cream-dark);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.np-bar-fill {
+  height: 100%;
+  width: 55%;
+  background: var(--red);
+  border-radius: 2px;
+  /* ANIMATION SLOT: uncomment to animate the progress bar */
+  /* animation: playing 8s linear infinite; */
+}
+@keyframes playing { from { width: 0%; } to { width: 100%; } }
+
+/* visitor counter */
+.counter {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--teal);
+  letter-spacing: 3px;
+  text-align: center;
+}
+.counter-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* ── MAIN CONTENT ── */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: 14px;
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  color: var(--text);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  /* ANIMATION SLOT: uncomment for a gentle bob */
+  /* animation: titlebob 4s ease-in-out infinite; */
+}
+@keyframes titlebob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+
+.hero-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tag {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+.tag.yellow { background: var(--yellow); color: var(--yellow-text); }
+.tag.teal   { background: var(--teal);   color: var(--teal-text); }
+.tag.red    { background: var(--red);    color: var(--red-text); }
+.tag.pink   { background: var(--pink);   color: var(--pink-text); }
+
+/* ── ENTRY CARD ── */
+.entry {
+  background: var(--cream);
+  border: 1px solid var(--cream-dark);
+  border-radius: 14px;
+  overflow: hidden;
+  /* ANIMATION SLOT: uncomment to fade entries in on load */
+  /* animation: fadeup 0.5s ease both; */
+}
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.entry-header {
+  background: var(--yellow);
+  border-bottom: 1px solid var(--yellow-dark);
+  padding: 11px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.entry-num {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+.entry-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--yellow-text);
+}
+.entry-date {
+  font-size: 0.72rem;
+  color: var(--yellow-text);
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(90,58,26,0.15);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+/* ── ENTRY BODY TYPOGRAPHY ── */
+.entry-body {
+  padding: 22px 26px;
+}
+
+/* h1 — big entry title */
+.entry-body h1 {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* h2 — section header with red left bar */
+.entry-body h2 {
+  font-size: 1rem;
+  color: var(--text);
+  padding-left: 12px;
+  border-left: 3px solid var(--red);
+  margin: 20px 0 8px;
+}
+
+/* h3 — small teal sub-label */
+.entry-body h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--teal);
+  margin: 14px 0 5px;
+}
+
+/* p — body paragraph */
+.entry-body p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 10px;
+}
+
+/* code — inline component/term */
+.entry-body code {
+  background: rgba(242,201,110,0.25);
+  border: 1px solid var(--yellow-dark);
+  color: var(--yellow-text);
+  padding: 1px 7px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+}
+
+/* ul — bullet list */
+.entry-body ul {
+  list-style: none;
+  margin: 6px 0 12px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.entry-body ul li {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+.entry-body ul li::before {
+  /* ICON SLOT: swap this for a custom bullet icon using content: url("bullet.svg") */
+  content: '▸';
+  color: var(--red);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ol — numbered list */
+.entry-body ol {
+  margin: 6px 0 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.entry-body ol li {
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+/* formula box */
+.formula {
+  background: var(--teal);
+  color: var(--teal-text);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border: 1px solid var(--teal-dark);
+}
+
+/* blockquote — callout box */
+.entry-body blockquote {
+  border-left: 3px solid var(--yellow);
+  background: rgba(242,201,110,0.12);
+  padding: 10px 16px;
+  margin: 12px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.88rem;
+  color: var(--text-mid);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* img inside entry */
+.entry-body img {
+  border-radius: 10px;
+  border: 2px solid var(--cream-dark);
+  margin: 12px auto;
+  /* ANIMATION SLOT: uncomment for a hover zoom */
+  /* transition: transform 0.2s ease; */
+}
+/* .entry-body img:hover { transform: scale(1.02); } */
+
+/* links inside entry */
+.entry-body a {
+  color: var(--red);
+  font-weight: bold;
+  border-bottom: 1px solid rgba(224,120,112,0.3);
+  transition: border-color 0.15s;
+}
+.entry-body a:hover { border-color: var(--red); text-decoration: none; }
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--red);
+  border-top: 2px solid var(--red-dark);
+  color: rgba(248,240,232,0.85);
+  font-size: 0.78rem;
+  text-align: center;
+  padding: 14px 20px;
+  margin-top: 40px;
+  letter-spacing: 0.5px;
+}
+.site-footer a { color: var(--yellow); }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .layout { grid-template-columns: 1fr; }
+  .topbar-nav { display: none; }
+  .hero-title { font-size: 1.6rem; }
+}
+
+/* ════════════════════════════════════════
+   ANIMATION REFERENCE
+   Uncomment any of these and apply the
+   class or animation name where you want it
+   ════════════════════════════════════════
+
+   Fade up on load:
+   .entry { animation: fadeup 0.5s ease both; }
+   .entry:nth-child(2) { animation-delay: 0.1s; }
+
+   Pulsing LED:
+   .led-dot { animation: ledpulse 1.8s ease-in-out infinite; }
+
+   Animated progress bar:
+   .np-bar-fill { animation: playing 8s linear infinite; }
+
+   Bobbing title:
+   .hero-title { animation: titlebob 4s ease-in-out infinite; }
+
+   Image hover zoom:
+   .entry-body img { transition: transform 0.2s ease; }
+   .entry-body img:hover { transform: scale(1.02); }
+
+   Nav button lift on hover (already active via transform in .nav-btn:hover)
+*/
