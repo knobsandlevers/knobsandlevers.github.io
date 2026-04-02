@@ -1,1 +1,208 @@
-<h1>Coming soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knobs and Levers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════
+       TOPBAR
+       To change the logo icon, swap the img tag inside .logo
+       or just change the emoji character if you're using text
+  ═══════════════════════════════ -->
+  <header class="topbar">
+    <div class="logo">
+      <!-- ICON SLOT: replace this span with an <img src="your-icon.png"> -->
+      <span class="logo-icon">⚡</span>
+      Knobs &amp; Levers
+    </div>
+    <nav class="topbar-nav">
+      <a href="index.html" class="nav-btn active">Home</a>
+      <a href="log.html" class="nav-btn teal">Build Log</a>
+      <a href="notes.html" class="nav-btn yellow">Notes</a>
+      <a href="components.html" class="nav-btn">Components</a>
+      <a href="about.html" class="nav-btn">About</a>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════
+       MAIN LAYOUT
+  ═══════════════════════════════ -->
+  <div class="layout">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+
+      <!-- Navigation -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Navigate</div>
+        <div class="sidebar-card-body">
+          <ul class="nav-list">
+            <!-- ICON SLOT: add an <img class="nav-icon"> before each link text -->
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="log.html">Build Log</a></li>
+            <li><a href="notes.html">Study Notes</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Status</div>
+        <div class="sidebar-card-body">
+          <div class="status-list">
+            <div class="status-item">
+              <span class="status-label">Book</span>
+              <span class="status-value">Make: Electronics</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Chapter</span>
+              <span class="status-value">1 — Getting Started</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Meter</span>
+              <span class="status-value">Klein MM420</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Kit</span>
+              <span class="status-value">ELEGOO Uno R3</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Status</span>
+              <span class="status-value led">
+                <span class="led-dot"></span> Learning
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Now Playing -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Now Playing</div>
+        <div class="sidebar-card-body">
+          <div class="now-playing">
+            <div class="now-playing-header">
+              <!-- ICON SLOT: swap ▶ for a custom play icon image -->
+              ▶ Now Playing
+            </div>
+            <div class="now-playing-body">
+              <div class="np-artist">Masayoshi Takanaka</div>
+              <div class="np-track">Inspiriting</div>
+              <div class="np-bar">
+                <div class="np-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visitor counter -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header">Visitors</div>
+        <div class="sidebar-card-body">
+          <div class="counter">000001</div>
+          <div class="counter-label">visitors</div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main-content">
+
+      <!-- HERO -->
+      <div class="hero">
+        <!-- ICON SLOT: add a banner image above the title if you want -->
+        <h1 class="hero-title">KNOBS AND LEVERS</h1>
+        <p class="hero-sub">A Musician's Journey Into Electronics Hardware</p>
+        <div class="hero-tags">
+          <span class="tag red">Electronics</span>
+          <span class="tag pink">Audio Hardware</span>
+          <span class="tag teal">Make: Electronics</span>
+          <span class="tag yellow">From Zero</span>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════
+           LOG ENTRY
+           To add a new entry: copy this whole .entry block,
+           paste it above this one, update the date and content.
+      ═══════════════════════════════ -->
+      <article class="entry">
+
+        <div class="entry-header">
+          <div>
+            <div class="entry-num">Log Entry #001</div>
+            <div class="entry-title">First Contact</div>
+          </div>
+          <span class="entry-date">2025.04.02</span>
+        </div>
+
+        <div class="entry-body">
+
+          <!--
+          ╔══════════════════════════════════════╗
+          ║  TYPOGRAPHY GUIDE                    ║
+          ╠══════════════════════════════════════╣
+          ║  h1  big page title                  ║
+          ║  h2  section header (red left bar)   ║
+          ║  h3  small sub-label (teal)          ║
+          ║  p   body paragraph                  ║
+          ║  code  component/term highlight      ║
+          ║  ul > li  bullet list                ║
+          ║  ol > li  numbered list              ║
+          ║  .formula  dark teal formula box     ║
+          ║  blockquote  callout box             ║
+          ║  img  photo (gets styled border)     ║
+          ║  a   link                            ║
+          ╚══════════════════════════════════════╝
+          -->
+
+          <h1>It Arrived.</h1>
+
+          <p>The Klein MM420 showed up in the mail today. First real piece of test equipment I've ever owned. Sitting here at 6am with the ELEGOO kit in the other room and Takanaka playing — feels like exactly the right way to start this.</p>
+
+          <h2>What I Have So Far</h2>
+          <ul>
+            <li>Klein Tools <code>MM420</code> multimeter</li>
+            <li>ELEGOO Uno R3 starter kit</li>
+            <li>Make: Electronics 3rd Edition (incoming)</li>
+          </ul>
+
+          <h2>First Concepts — ECE Topics #1</h2>
+          <p>Started MegawattKW's ECE Topics series this morning. Episode 1 covers the four fundamentals: voltage, current, resistance, and power.</p>
+
+          <div class="formula">V = IR &nbsp;|&nbsp; P = VI &nbsp;|&nbsp; P = I²R</div>
+
+          <h3>Real-World Scale</h3>
+          <ul>
+            <li>Red LED — ~2V, a few milliamps, about <code>9mW</code></li>
+            <li>USB — 5V, 2A, <code>10W</code></li>
+            <li>Electric Vehicle — 800V, 200A, <code>160kW</code></li>
+          </ul>
+
+          <blockquote>The same Ohm's Law that governs a tiny LED scales up to 215 horsepower in an EV. Wild.</blockquote>
+
+          <p>More to come. Just getting started.</p>
+
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    knobsandlevers.com &nbsp;·&nbsp;
+    <a href="mailto:hello@knobsandlevers.com">hello@knobsandlevers.com</a>
+    &nbsp;·&nbsp; no cookies. no tracking. just electrons.
+  </footer>
+
+</body>
+</html>
