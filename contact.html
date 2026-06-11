@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Knobs &amp; Levers</title>
+  <meta name="description" content="Get in touch with Blake Giancoli for scoring, sound design, and creative collaborations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="page-veil"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Knobs &amp; Levers</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sounds.html">Sounds</a></li>
+    <li><a href="scores.html">Scores</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Let's Make Something</span>
+      <h1 class="section-title">Get In Touch</h1>
+      <p class="section-sub">Whether you've got a project in mind or just want to start a conversation — my inbox is open.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ── LEFT: IDENTITY + SOCIALS ── -->
+        <div class="reveal">
+
+          <img src="assets/ProfilePic.png" alt="Blake Giancoli" class="contact-photo">
+
+          <h2 style="font-family:var(--font-display); font-size:1.6rem; font-weight:700; margin-bottom:4px;">Blake Giancoli</h2>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:20px;">Composer · Sound Designer · Musician</p>
+
+          <div class="avail-badge" style="margin-bottom:28px;">
+            <span class="avail-dot"></span>
+            Available for commissions
+          </div>
+
+          <p style="color:var(--text-muted); line-height:1.75; font-size:0.95rem; margin-bottom:32px;">
+            I'm currently accepting scoring commissions for video games, film, TV, and commercial media.
+            Response time is usually within 24–48 hours. Don't be shy — the best projects start with a quick hello.
+          </p>
+
+          <div style="margin-bottom:8px;">
+            <span style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim);">Direct Email</span>
+          </div>
+          <a href="mailto:cateyesblake@gmail.com" style="font-family:var(--font-display); font-size:1rem; color:var(--lilac); text-decoration:none; font-weight:500; display:block; margin-bottom:32px; transition:color 0.2s;" onmouseover="this.style.color='var(--violet-hi)'" onmouseout="this.style.color='var(--lilac)'">
+            cateyesblake@gmail.com
+          </a>
+
+          <!-- SOCIAL LINKS -->
+          <div class="social-links">
+
+            <!-- ══ SOCIAL LINK ══
+                 To add/update a social: copy a .social-link block below,
+                 update the href, icon emoji, label, and handle.
+            ══════════════════ -->
+
+            <a href="https://soundcloud.com/knobsandlevers" target="_blank" class="social-link">
+              <div class="social-icon">☁️</div>
+              <div>
+                <div style="font-weight:500; font-size:0.9rem;">SoundCloud</div>
+                <div style="font-size:0.78rem; color:var(--text-dim);">@knobsandlevers</div>
+              </div>
+            </a>
+
+            <a href="https://open.spotify.com" target="_blank" class="social-link">
+              <div class="social-icon">🎵</div>
+              <div>
+                <div style="font-weight:500; font-size:0.9rem;">Spotify</div>
+                <div style="font-size:0.78rem; color:var(--text-dim);">Blake Giancoli</div>
+              </div>
+            </a>
+
+            <a href="https://instagram.com" target="_blank" class="social-link">
+              <div class="social-icon">📸</div>
+              <div>
+                <div style="font-weight:500; font-size:0.9rem;">Instagram</div>
+                <div style="font-size:0.78rem; color:var(--text-dim);">@knobsandlevers — update this handle</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/knobsandlevers" target="_blank" class="social-link">
+              <div class="social-icon">🐙</div>
+              <div>
+                <div style="font-weight:500; font-size:0.9rem;">GitHub</div>
+                <div style="font-size:0.78rem; color:var(--text-dim);">knobsandlevers</div>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" class="social-link">
+              <div class="social-icon">💼</div>
+              <div>
+                <div style="font-weight:500; font-size:0.9rem;">LinkedIn</div>
+                <div style="font-size:0.78rem; color:var(--text-dim);">Blake Giancoli — add your URL</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ── RIGHT: CONTACT FORM ── -->
+        <div class="reveal">
+          <div style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:36px;">
+
+            <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:600; margin-bottom:6px;">Send a Message</h3>
+            <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:28px;">Tell me about your project and I'll get back to you shortly.</p>
+
+            <!--
+              FORM SETUP:
+              This form uses Formspree for zero-backend email delivery.
+              1. Go to https://formspree.io and create a free account
+              2. Create a new form pointed at cateyesblake@gmail.com
+              3. Replace YOUR_FORM_ID in the action URL below with your form ID
+              Until then, the form falls back to opening your mail client automatically.
+            -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              class="contact-form">
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                <div class="form-group">
+                  <label class="form-label" for="name">Name</label>
+                  <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="type">Project Type</label>
+                <select class="form-select" id="type" name="type" required>
+                  <option value="" disabled selected>Select a project type</option>
+                  <option value="Video Game Scoring">Video Game Scoring</option>
+                  <option value="Film Scoring">Film Scoring</option>
+                  <option value="TV / Commercial">TV / Commercial</option>
+                  <option value="Short Film">Short Film</option>
+                  <option value="Sound Design">Sound Design</option>
+                  <option value="Sync Licensing">Sync Licensing</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="budget">Budget Range (optional)</label>
+                <select class="form-select" id="budget" name="budget">
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="Under $500">Under $500</option>
+                  <option value="$500 – $2,000">$500 – $2,000</option>
+                  <option value="$2,000 – $5,000">$2,000 – $5,000</option>
+                  <option value="$5,000 – $10,000">$5,000 – $10,000</option>
+                  <option value="$10,000+">$10,000+</option>
+                  <option value="Let's discuss">Let's discuss</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about the project — genre, timeline, what you're going for..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              </button>
+
+            </form>
+
+            <div id="form-success" class="form-success" style="margin-top:16px;">
+              ✓ &nbsp; Message sent — I'll be in touch soon. Thanks, Blake
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <span class="footer-brand">Knobs &amp; Levers</span>
+  <nav class="footer-nav">
+    <a href="sounds.html">Sounds</a>
+    <a href="scores.html">Scores</a>
+    <a href="games.html">Games</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 Blake Giancoli</span>
+</footer>
+
+<script src="transitions.js"></script>
+</body>
+</html>

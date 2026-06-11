@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sounds — Knobs &amp; Levers</title>
+  <meta name="description" content="Albums, songs, and sound design by Blake Giancoli.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="page-veil"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Knobs &amp; Levers</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sounds.html">Sounds</a></li>
+    <li><a href="scores.html">Scores</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Discography &amp; Sound Design</span>
+      <h1 class="section-title">Sounds</h1>
+      <p class="section-sub">Albums, singles, and private tracks — streamed from the platforms you already use, or played right here.</p>
+    </div>
+  </div>
+
+  <!-- ── TABS ── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="tabs reveal">
+        <button class="tab-btn active" data-tab="tab-albums">Albums</button>
+        <button class="tab-btn" data-tab="tab-singles">Singles &amp; Demos</button>
+        <button class="tab-btn" data-tab="tab-sounddesign">Sound Design</button>
+      </div>
+
+      <!-- ALBUMS -->
+      <div id="tab-albums" class="tab-panel active">
+        <div style="margin-bottom:48px;">
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:32px;">
+            Stream on your platform of choice — embeds load directly from SoundCloud and Spotify.
+          </p>
+
+          <!-- ══ ALBUM BLOCK ══
+               To add an album: copy the .album-block div below, update the iframe src,
+               title, year, and description. Get the SoundCloud embed src from:
+               Share → Embed → copy the src URL from the iframe code.
+               For Spotify: Share → Embed Track/Album → copy iframe src.
+          ══════════════════ -->
+
+          <div class="album-block reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; margin-bottom:56px;">
+            <div class="embed-wrap">
+              <!-- SOUNDCLOUD EMBED — replace src with your album embed URL -->
+              <iframe
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/knobsandlevers&color=%237c3aed&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                height="300"
+                scrolling="no"
+                allow="autoplay">
+              </iframe>
+            </div>
+            <div style="padding-top:8px;">
+              <span class="section-label">SoundCloud</span>
+              <h3 style="font-family:var(--font-display); font-size:1.5rem; font-weight:700; color:var(--text); margin-bottom:8px;">Your Album Title Here</h3>
+              <p style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim); margin-bottom:16px;">YEAR · N Tracks · Genre</p>
+              <p style="color:var(--text-muted); line-height:1.75; font-size:0.95rem; margin-bottom:20px;">
+                A short description of this album — what inspired it, what it sounds like, what era of your work it represents.
+              </p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;">
+                <span class="tag tag-violet">Electronic</span>
+                <span class="tag tag-blue">Synthpop</span>
+                <span class="tag tag-purple">Ambient</span>
+              </div>
+              <a href="https://soundcloud.com/knobsandlevers" target="_blank" class="btn btn-ghost" style="font-size:0.78rem; padding:9px 18px;">
+                Open on SoundCloud ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Spotify album example -->
+          <div class="album-block reveal" style="display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; margin-bottom:56px; direction:rtl;">
+            <div class="embed-wrap" style="direction:ltr;">
+              <!-- SPOTIFY EMBED — replace src with your album embed URL -->
+              <!-- Get it from: open album on Spotify → ··· → Share → Embed album → copy iframe src -->
+              <iframe
+                src="https://open.spotify.com/embed/artist/REPLACE_WITH_YOUR_ARTIST_ID?utm_source=generator&theme=0"
+                height="300"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+              </iframe>
+            </div>
+            <div style="padding-top:8px; direction:ltr;">
+              <span class="section-label">Spotify</span>
+              <h3 style="font-family:var(--font-display); font-size:1.5rem; font-weight:700; color:var(--text); margin-bottom:8px;">Another Album Title</h3>
+              <p style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim); margin-bottom:16px;">YEAR · N Tracks · Genre</p>
+              <p style="color:var(--text-muted); line-height:1.75; font-size:0.95rem; margin-bottom:20px;">
+                Description of this album. What was the creative intention? What sounds define it?
+              </p>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;">
+                <span class="tag tag-violet">Cinematic</span>
+                <span class="tag tag-blue">Dark Synth</span>
+              </div>
+              <a href="https://open.spotify.com" target="_blank" class="btn btn-ghost" style="font-size:0.78rem; padding:9px 18px;">
+                Open on Spotify ↗
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SINGLES & DEMOS -->
+      <div id="tab-singles" class="tab-panel">
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:32px;">
+          Private tracks and unreleased work — hosted here, playable directly in your browser.
+        </p>
+
+        <!-- ══ AUDIO CARD ══
+             To add a track: copy one .audio-card div below.
+             Set the <audio src=""> to your uploaded file path (e.g. assets/audio/trackname.mp3).
+             Update title, meta, and tags.
+        ══════════════════ -->
+
+        <div style="display:flex; flex-direction:column; gap:16px;">
+
+          <div class="audio-card reveal">
+            <div class="audio-card-header">
+              <div class="audio-thumb">🎹</div>
+              <div class="audio-info">
+                <div class="audio-title">Track Title — upload your .mp3 to assets/audio/</div>
+                <div class="audio-meta">2024 · Electronic · 3:42</div>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <span class="tag tag-violet">Unreleased</span>
+              </div>
+            </div>
+            <div class="audio-controls">
+              <button class="play-btn" aria-label="Play"></button>
+              <div class="waveform-bar">
+                <div class="waveform-visual"></div>
+              </div>
+              <span class="audio-duration">0:00</span>
+            </div>
+            <audio src="assets/audio/placeholder.mp3" preload="metadata"></audio>
+          </div>
+
+          <div class="audio-card reveal">
+            <div class="audio-card-header">
+              <div class="audio-thumb">🌊</div>
+              <div class="audio-info">
+                <div class="audio-title">Another Demo Track</div>
+                <div class="audio-meta">2023 · Ambient · 5:18</div>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <span class="tag tag-blue">Demo</span>
+              </div>
+            </div>
+            <div class="audio-controls">
+              <button class="play-btn" aria-label="Play"></button>
+              <div class="waveform-bar">
+                <div class="waveform-visual"></div>
+              </div>
+              <span class="audio-duration">0:00</span>
+            </div>
+            <audio src="assets/audio/placeholder2.mp3" preload="metadata"></audio>
+          </div>
+
+          <div class="audio-card reveal">
+            <div class="audio-card-header">
+              <div class="audio-thumb">⚡</div>
+              <div class="audio-info">
+                <div class="audio-title">Synth Sketch 03</div>
+                <div class="audio-meta">2025 · Synthpop · 2:55</div>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <span class="tag tag-purple">Available for Sync</span>
+              </div>
+            </div>
+            <div class="audio-controls">
+              <button class="play-btn" aria-label="Play"></button>
+              <div class="waveform-bar">
+                <div class="waveform-visual"></div>
+              </div>
+              <span class="audio-duration">0:00</span>
+            </div>
+            <audio src="assets/audio/placeholder3.mp3" preload="metadata"></audio>
+          </div>
+
+        </div>
+
+        <div style="margin-top:24px; padding:20px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);">
+          <p style="font-size:0.85rem; color:var(--text-muted);">
+            <strong style="color:var(--lilac);">To add tracks:</strong> Upload your .mp3 files to <code style="font-family:var(--font-mono); color:var(--violet-hi);">assets/audio/</code> in this repo, then copy an audio-card block in <code style="font-family:var(--font-mono); color:var(--violet-hi);">sounds.html</code> and update the src path.
+          </p>
+        </div>
+      </div>
+
+      <!-- SOUND DESIGN -->
+      <div id="tab-sounddesign" class="tab-panel">
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:32px;">
+          Sound design work — atmospheres, SFX, and texture packs.
+        </p>
+
+        <div class="grid-2">
+
+          <div class="audio-card reveal">
+            <div class="audio-card-header">
+              <div class="audio-thumb">🌌</div>
+              <div class="audio-info">
+                <div class="audio-title">Atmospheric Texture Pack — Vol. 1</div>
+                <div class="audio-meta">2024 · Sound Design · Ambient</div>
+              </div>
+            </div>
+            <div class="audio-controls">
+              <button class="play-btn" aria-label="Play"></button>
+              <div class="waveform-bar">
+                <div class="waveform-visual"></div>
+              </div>
+              <span class="audio-duration">0:00</span>
+            </div>
+            <audio src="assets/audio/placeholder.mp3" preload="metadata"></audio>
+          </div>
+
+          <div class="audio-card reveal">
+            <div class="audio-card-header">
+              <div class="audio-thumb">🔊</div>
+              <div class="audio-info">
+                <div class="audio-title">UI / Game SFX Demo Reel</div>
+                <div class="audio-meta">2025 · Sound Design · Interactive</div>
+              </div>
+            </div>
+            <div class="audio-controls">
+              <button class="play-btn" aria-label="Play"></button>
+              <div class="waveform-bar">
+                <div class="waveform-visual"></div>
+              </div>
+              <span class="audio-duration">0:00</span>
+            </div>
+            <audio src="assets/audio/placeholder2.mp3" preload="metadata"></audio>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="divider"></div>
+  <section class="section-sm">
+    <div class="container reveal" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:600; margin-bottom:4px;">Interested in licensing or collaboration?</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem;">Reach out — I'm available for sync, custom scoring, and creative partnerships.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <span class="footer-brand">Knobs &amp; Levers</span>
+  <nav class="footer-nav">
+    <a href="sounds.html">Sounds</a>
+    <a href="scores.html">Scores</a>
+    <a href="games.html">Games</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 Blake Giancoli</span>
+</footer>
+
+<script src="transitions.js"></script>
+</body>
+</html>

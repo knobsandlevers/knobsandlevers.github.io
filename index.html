@@ -3,206 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knobs and Levers</title>
+  <title>Blake Giancoli — Knobs & Levers</title>
+  <meta name="description" content="Blake Giancoli is a composer, sound designer, and musician available for film, TV, video game, and commercial scoring.">
+  <meta property="og:title" content="Blake Giancoli — Knobs & Levers">
+  <meta property="og:description" content="Composer · Sound Designer · Sonic World Builder">
+  <meta property="og:image" content="assets/ProfilePic.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ═══════════════════════════════
-       TOPBAR
-       To change the logo icon, swap the img tag inside .logo
-       or just change the emoji character if you're using text
-  ═══════════════════════════════ -->
-  <header class="topbar">
-    <div class="logo">
-      <!-- ICON SLOT: replace this span with an <img src="your-icon.png"> -->
-      <span class="logo-icon">⚡</span>
-      Knobs &amp; Levers
+<div id="page-veil"></div>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Knobs &amp; Levers</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sounds.html">Sounds</a></li>
+    <li><a href="scores.html">Scores</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="avail-badge">
+          <span class="avail-dot"></span>
+          Available for scoring commissions
+        </div>
+
+        <div class="hero-eyebrow">Composer · Sound Designer · Musician</div>
+
+        <h1 class="hero-name">Blake<br>Giancoli</h1>
+        <span class="hero-brand">Knobs &amp; Levers</span>
+
+        <div class="hero-roles">
+          <span class="tag tag-violet">Film Scoring</span>
+          <span class="tag tag-blue">Video Games</span>
+          <span class="tag tag-purple">Sound Design</span>
+          <span class="tag tag-violet">TV &amp; Commercial</span>
+          <span class="tag tag-blue">Electronic Music</span>
+        </div>
+
+        <p class="hero-desc">
+          I build sonic worlds — from intimate, textured atmospheres to full orchestral and electronic scores.
+          Based in the intersection of sound design and composition, I'm looking to collaborate on video games,
+          films, TV, and commercial media that demand something genuinely different.
+        </p>
+
+        <div class="hero-cta">
+          <a href="sounds.html" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Hear My Work
+          </a>
+          <a href="contact.html" class="btn btn-ghost">Let's Collaborate</a>
+        </div>
+
+      </div>
     </div>
-    <nav class="topbar-nav">
-      <a href="index.html" class="nav-btn active">Home</a>
-      <a href="log.html" class="nav-btn teal">Build Log</a>
-      <a href="notes.html" class="nav-btn yellow">Notes</a>
-      <a href="components.html" class="nav-btn">Components</a>
-      <a href="about.html" class="nav-btn">About</a>
-    </nav>
-  </header>
+  </section>
 
-  <!-- ═══════════════════════════════
-       MAIN LAYOUT
-  ═══════════════════════════════ -->
-  <div class="layout">
+  <div class="divider"></div>
 
-    <!-- ── SIDEBAR ── -->
-    <aside class="sidebar">
+  <!-- ── BIO ── -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr 420px; gap: 64px; align-items: center;">
 
-      <!-- Navigation -->
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">Navigate</div>
-        <div class="sidebar-card-body">
-          <ul class="nav-list">
-            <!-- ICON SLOT: add an <img class="nav-icon"> before each link text -->
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="log.html">Build Log</a></li>
-            <li><a href="notes.html">Study Notes</a></li>
-            <li><a href="components.html">Components</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
+        <div class="reveal">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Crafting Sound<br>That Tells Stories</h2>
+          <p style="color:var(--text-muted); line-height:1.8; margin-bottom:20px;">
+            I'm Blake Giancoli — a composer, musician, and sound designer whose work lives at the edge of
+            electronic synthesis and cinematic texture. I've spent years building a catalog that spans
+            moody synth-driven albums, experimental sound design, and original scores for independent film.
+          </p>
+          <p style="color:var(--text-muted); line-height:1.8; margin-bottom:32px;">
+            My goal is simple: score more video games and films. I bring a deep understanding of interactive
+            audio, adaptive music systems, and the kind of emotional specificity that makes a scene land.
+            Whether you need a sweeping orchestral moment or a micro-tension sound bed, I'm built for it.
+          </p>
+          <a href="scores.html" class="btn btn-ghost" style="width:fit-content;">View My Scores</a>
         </div>
-      </div>
 
-      <!-- Status -->
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">Status</div>
-        <div class="sidebar-card-body">
-          <div class="status-list">
-            <div class="status-item">
-              <span class="status-label">Book</span>
-              <span class="status-value">Make: Electronics</span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Chapter</span>
-              <span class="status-value">1 — Getting Started</span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Meter</span>
-              <span class="status-value">Klein MM420</span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Kit</span>
-              <span class="status-value">ELEGOO Uno R3</span>
-            </div>
-            <div class="status-item">
-              <span class="status-label">Status</span>
-              <span class="status-value led">
-                <span class="led-dot"></span> Learning
-              </span>
+        <div class="reveal" style="display:flex; flex-direction:column; gap:16px;">
+          <div class="card" style="padding:24px;">
+            <div style="font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--violet-hi); margin-bottom:8px;">Specialties</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="tag tag-violet">Synthpop</span>
+              <span class="tag tag-blue">Orchestral</span>
+              <span class="tag tag-purple">Ambient</span>
+              <span class="tag tag-violet">Electronic</span>
+              <span class="tag tag-blue">Cinematic</span>
+              <span class="tag tag-purple">Sound Design</span>
+              <span class="tag tag-violet">Adaptive Audio</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Now Playing -->
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">Now Playing</div>
-        <div class="sidebar-card-body">
-          <div class="now-playing">
-            <div class="now-playing-header">
-              <!-- ICON SLOT: swap ▶ for a custom play icon image -->
-              ▶ Now Playing
-            </div>
-            <div class="now-playing-body">
-              <div class="np-artist">Masayoshi Takanaka</div>
-              <div class="np-track">Inspiriting</div>
-              <div class="np-bar">
-                <div class="np-bar-fill"></div>
-              </div>
+          <div class="card" style="padding:24px;">
+            <div style="font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--violet-hi); margin-bottom:8px;">Tools</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="tag tag-blue">Bitwig Studio</span>
+              <span class="tag tag-purple">TouchDesigner</span>
+              <span class="tag tag-violet">Max/MSP</span>
+              <span class="tag tag-blue">Modular Synthesis</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Visitor counter -->
-      <div class="sidebar-card">
-        <div class="sidebar-card-header">Visitors</div>
-        <div class="sidebar-card-body">
-          <div class="counter">000001</div>
-          <div class="counter-label">visitors</div>
-        </div>
-      </div>
-
-    </aside>
-
-    <!-- ── MAIN CONTENT ── -->
-    <main class="main-content">
-
-      <!-- HERO -->
-      <div class="hero">
-        <!-- ICON SLOT: add a banner image above the title if you want -->
-        <h1 class="hero-title">KNOBS AND LEVERS</h1>
-        <p class="hero-sub">A Musician's Journey Into Electronics Hardware</p>
-        <div class="hero-tags">
-          <span class="tag red">Electronics</span>
-          <span class="tag pink">Audio Hardware</span>
-          <span class="tag teal">Make: Electronics</span>
-          <span class="tag yellow">From Zero</span>
-        </div>
-      </div>
-
-      <!-- ═══════════════════════════════
-           LOG ENTRY
-           To add a new entry: copy this whole .entry block,
-           paste it above this one, update the date and content.
-      ═══════════════════════════════ -->
-      <article class="entry">
-
-        <div class="entry-header">
-          <div>
-            <div class="entry-num">Log Entry #001</div>
-            <div class="entry-title">First Contact</div>
+          <div class="card" style="padding:24px;">
+            <div style="font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--violet-hi); margin-bottom:8px;">Looking For</div>
+            <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+              Video game scoring, film &amp; TV scoring, commercial sync, and long-term creative collaborations
+              with directors, studios, and game developers.
+            </p>
           </div>
-          <span class="entry-date">2025.04.02</span>
         </div>
 
-        <div class="entry-body">
+      </div>
+    </div>
+  </section>
 
-          <!--
-          ╔══════════════════════════════════════╗
-          ║  TYPOGRAPHY GUIDE                    ║
-          ╠══════════════════════════════════════╣
-          ║  h1  big page title                  ║
-          ║  h2  section header (red left bar)   ║
-          ║  h3  small sub-label (teal)          ║
-          ║  p   body paragraph                  ║
-          ║  code  component/term highlight      ║
-          ║  ul > li  bullet list                ║
-          ║  ol > li  numbered list              ║
-          ║  .formula  dark teal formula box     ║
-          ║  blockquote  callout box             ║
-          ║  img  photo (gets styled border)     ║
-          ║  a   link                            ║
-          ╚══════════════════════════════════════╝
-          -->
+  <div class="divider"></div>
 
-          <h1>It Arrived.</h1>
+  <!-- ── FEATURED WORK ── -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:40px;">
+        <span class="section-label">Featured Work</span>
+        <h2 class="section-title">A Taste of What I Do</h2>
+      </div>
 
-          <p>The Klein MM420 showed up in the mail today. First real piece of test equipment I've ever owned. Sitting here at 6am with the ELEGOO kit in the other room and Takanaka playing — feels like exactly the right way to start this.</p>
+      <div class="grid-3 stagger-children">
 
-          <h2>What I Have So Far</h2>
-          <ul>
-            <li>Klein Tools <code>MM420</code> multimeter</li>
-            <li>ELEGOO Uno R3 starter kit</li>
-            <li>Make: Electronics 3rd Edition (incoming)</li>
-          </ul>
+        <a href="sounds.html" class="featured-card">
+          <div class="featured-card-bg">🎵</div>
+          <div class="featured-card-content">
+            <div class="featured-card-type">Sounds</div>
+            <div class="featured-card-title">Albums &amp; Tracks</div>
+          </div>
+        </a>
 
-          <h2>First Concepts — ECE Topics #1</h2>
-          <p>Started MegawattKW's ECE Topics series this morning. Episode 1 covers the four fundamentals: voltage, current, resistance, and power.</p>
+        <a href="scores.html" class="featured-card">
+          <div class="featured-card-bg">🎬</div>
+          <div class="featured-card-content">
+            <div class="featured-card-type">Scores</div>
+            <div class="featured-card-title">Film &amp; TV Scoring</div>
+          </div>
+        </a>
 
-          <div class="formula">V = IR &nbsp;|&nbsp; P = VI &nbsp;|&nbsp; P = I²R</div>
+        <a href="games.html" class="featured-card">
+          <div class="featured-card-bg">🎮</div>
+          <div class="featured-card-content">
+            <div class="featured-card-type">Games</div>
+            <div class="featured-card-title">Video Game Credits</div>
+          </div>
+        </a>
 
-          <h3>Real-World Scale</h3>
-          <ul>
-            <li>Red LED — ~2V, a few milliamps, about <code>9mW</code></li>
-            <li>USB — 5V, 2A, <code>10W</code></li>
-            <li>Electric Vehicle — 800V, 200A, <code>160kW</code></li>
-          </ul>
+      </div>
+    </div>
+  </section>
 
-          <blockquote>The same Ohm's Law that governs a tiny LED scales up to 215 horsepower in an EV. Wild.</blockquote>
+  <div class="divider"></div>
 
-          <p>More to come. Just getting started.</p>
-
+  <!-- ── CTA STRIP ── -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="reveal" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+        <div>
+          <h3 style="font-family:var(--font-display); font-size:1.4rem; font-weight:600; margin-bottom:6px;">Ready to score something great?</h3>
+          <p style="color:var(--text-muted); font-size:0.95rem;">I'm currently accepting commissions for games, film, and commercial media.</p>
         </div>
-      </article>
+        <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
 
-    </main>
-  </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    knobsandlevers.com &nbsp;·&nbsp;
-    <a href="mailto:hello@knobsandlevers.com">hello@knobsandlevers.com</a>
-    &nbsp;·&nbsp; no cookies. no tracking. just electrons.
-  </footer>
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <span class="footer-brand">Knobs &amp; Levers</span>
+  <nav class="footer-nav">
+    <a href="sounds.html">Sounds</a>
+    <a href="scores.html">Scores</a>
+    <a href="games.html">Games</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 Blake Giancoli</span>
+</footer>
 
+<script src="transitions.js"></script>
 </body>
 </html>

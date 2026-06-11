@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scores — Knobs &amp; Levers</title>
+  <meta name="description" content="Film, TV, and short film scoring by Blake Giancoli.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="page-veil"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Knobs &amp; Levers</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="sounds.html">Sounds</a></li>
+    <li><a href="scores.html">Scores</a></li>
+    <li><a href="games.html">Games</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-label">Film · TV · Commercial · Short Film</span>
+      <h1 class="section-title">Scores</h1>
+      <p class="section-sub">Original music for moving images — click any project to watch a clip.</p>
+    </div>
+  </div>
+
+  <!-- ── TABS ── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="tabs reveal">
+        <button class="tab-btn active" data-tab="tab-film">Film</button>
+        <button class="tab-btn" data-tab="tab-tv">TV &amp; Commercial</button>
+        <button class="tab-btn" data-tab="tab-short">Short Film</button>
+      </div>
+
+      <!-- FILM -->
+      <div id="tab-film" class="tab-panel active">
+        <div class="grid-2 stagger-children">
+
+          <!-- ══ SCORE CARD ══
+               To add a project:
+               1. Copy this .score-card block
+               2. Set data-video to your video file path OR a YouTube embed URL
+                  - Local file: data-video="assets/video/myfilm.mp4"
+                  - YouTube: wrap in an iframe inside the modal instead (see note below)
+               3. Update data-title, data-desc
+               4. Update the thumbnail: replace the emoji in .score-thumb with an <img src="...">
+          ══════════════════ -->
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder.mp4"
+               data-title="Feature Film Title"
+               data-desc="Original score · Director: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">🎬</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">Feature Film Title</div>
+              <div class="score-meta">Original Score · Director: Name · 2024</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-violet">Drama</span>
+                <span class="tag tag-blue">Orchestral</span>
+                <span class="tag tag-purple">Full Score</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder2.mp4"
+               data-title="Indie Feature"
+               data-desc="Original score · Director: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">🌙</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">Indie Feature Title</div>
+              <div class="score-meta">Original Score · Director: Name · 2023</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-blue">Thriller</span>
+                <span class="tag tag-violet">Electronic</span>
+                <span class="tag tag-purple">Synth</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:28px; padding:20px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);">
+          <p style="font-size:0.85rem; color:var(--text-muted);">
+            <strong style="color:var(--lilac);">To add a score:</strong>
+            Upload video clips to <code style="font-family:var(--font-mono); color:var(--violet-hi);">assets/video/</code> and copy a score-card block. Set <code style="font-family:var(--font-mono); color:var(--violet-hi);">data-video</code> to the file path. For YouTube clips, swap <code style="font-family:var(--font-mono); color:var(--violet-hi);">data-video</code> for a direct link and update the modal to use an iframe.
+          </p>
+        </div>
+      </div>
+
+      <!-- TV & COMMERCIAL -->
+      <div id="tab-tv" class="tab-panel">
+        <div class="grid-2 stagger-children">
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder.mp4"
+               data-title="Commercial Project"
+               data-desc="Original music · Brand: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">📺</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">Commercial Project Title</div>
+              <div class="score-meta">Original Music · Brand: Name · 2024</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-violet">Commercial</span>
+                <span class="tag tag-blue">30s</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder2.mp4"
+               data-title="TV Episode"
+               data-desc="Additional music · Show: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">🎞️</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">TV Show Title</div>
+              <div class="score-meta">Additional Music · Network: Name · 2024</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-purple">TV</span>
+                <span class="tag tag-blue">Drama</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SHORT FILM -->
+      <div id="tab-short" class="tab-panel">
+        <div class="grid-3 stagger-children">
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder.mp4"
+               data-title="Short Film Title"
+               data-desc="Original score · Director: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">🎥</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">Short Film Title</div>
+              <div class="score-meta">Original Score · 2024 · 12 min</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-violet">Horror</span>
+                <span class="tag tag-purple">Ambient</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder2.mp4"
+               data-title="Short Film Title 2"
+               data-desc="Original score · Director: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">🌆</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">Short Film Title 2</div>
+              <div class="score-meta">Original Score · 2023 · 8 min</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-blue">Sci-Fi</span>
+                <span class="tag tag-violet">Electronic</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="score-card reveal"
+               data-video="assets/video/placeholder.mp4"
+               data-title="Short Film Title 3"
+               data-desc="Additional music · Director: Name · Year">
+            <div class="score-thumb">
+              <span style="font-size:2.5rem;">🌊</span>
+              <div class="score-play-overlay">
+                <div class="score-play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="score-body">
+              <div class="score-title">Short Film Title 3</div>
+              <div class="score-meta">Additional Music · 2022 · 20 min</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag tag-purple">Drama</span>
+                <span class="tag tag-blue">Orchestral</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="divider"></div>
+  <section class="section-sm">
+    <div class="container reveal" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:600; margin-bottom:4px;">Looking for a composer for your project?</h3>
+        <p style="color:var(--text-muted); font-size:0.9rem;">I'm available for full scores, additional music, and sync licensing.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── VIDEO MODAL ── -->
+<div id="video-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <video class="modal-video" controls playsinline></video>
+    <div class="modal-info">
+      <div class="modal-title"></div>
+      <div class="modal-desc"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <span class="footer-brand">Knobs &amp; Levers</span>
+  <nav class="footer-nav">
+    <a href="sounds.html">Sounds</a>
+    <a href="scores.html">Scores</a>
+    <a href="games.html">Games</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <span class="footer-copy">&copy; 2026 Blake Giancoli</span>
+</footer>
+
+<script src="transitions.js"></script>
+</body>
+</html>
